@@ -1,0 +1,8 @@
+{
+  "name": "jenkins-demo-app",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node test/suma.test.js",
+    "build": "echo 'Build completado' && mkdir dist && copy index.js dist\\"
+  }
+}
