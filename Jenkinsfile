@@ -67,7 +67,6 @@ El pipeline terminó correctamente.
 
 Proyecto: ${JOB_NAME}
 Build: ${BUILD_NUMBER}
-
 Estado: SUCCESS
 
 Puedes revisar los detalles aquí:
@@ -89,7 +88,6 @@ El pipeline falló.
 
 Proyecto: ${JOB_NAME}
 Build: ${BUILD_NUMBER}
-
 Estado: FAILED
 
 Revisa los detalles aquí:
@@ -104,4 +102,3 @@ ${BUILD_URL}
         }
     }
 }
-```
