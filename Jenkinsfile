@@ -1,3 +1,4 @@
+```groovy
 pipeline {
     agent any
 
@@ -54,12 +55,49 @@ pipeline {
     }
 
     post {
+
         success {
             echo "Pipeline ejecutado correctamente."
+
+            emailext(
+                subject: "Jenkins SUCCESS - ${JOB_NAME} #${BUILD_NUMBER}",
+                body: """
+Hola Daniel,
+
+El pipeline terminó correctamente.
+
+Proyecto: ${JOB_NAME}
+Build: ${BUILD_NUMBER}
+
+Estado: SUCCESS
+
+Puedes revisar los detalles aquí:
+${BUILD_URL}
+""",
+                to: "TU_CORREO@gmail.com"
+            )
         }
 
         failure {
             echo "El pipeline falló."
+
+            emailext(
+                subject: "Jenkins FAILED - ${JOB_NAME} #${BUILD_NUMBER}",
+                body: """
+Hola Daniel,
+
+El pipeline falló.
+
+Proyecto: ${JOB_NAME}
+Build: ${BUILD_NUMBER}
+
+Estado: FAILED
+
+Revisa los detalles aquí:
+${BUILD_URL}
+""",
+                to: "TU_CORREO@gmail.com"
+            )
         }
 
         always {
@@ -67,3 +105,4 @@ pipeline {
         }
     }
 }
+```
