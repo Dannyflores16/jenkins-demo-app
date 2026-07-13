@@ -74,7 +74,7 @@ Estado: SUCCESS
 Puedes revisar los detalles aquí:
 ${BUILD_URL}
 """,
-                to: "TU_CORREO@gmail.com"
+                to: "powertecno775@gmail.com"
             )
         }
 
@@ -96,7 +96,7 @@ Estado: FAILED
 Revisa los detalles aquí:
 ${BUILD_URL}
 """,
-                to: "TU_CORREO@gmail.com"
+                to: "powertecno775@gmail.com"
             )
         }
 
