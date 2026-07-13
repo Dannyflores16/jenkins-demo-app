@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "scripts": {
     "test": "node test/suma.test.js",
-    "build": "echo 'Build completado' && mkdir dist && copy index.js dist\\"
+   "build": "echo Build completado && if not exist dist mkdir dist && copy index.js dist\\"
   }
 }
